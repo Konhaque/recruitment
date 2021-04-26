@@ -6,21 +6,3 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 
 Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 Output: 7 -> 0 -> 8
-
-function sumNumbers(numbers1,numbers2){
-    var sums = [];
-    var resto = 0;
-    for(var i = 0; i<numbers1.length;i++){
-        var sum = numbers1[i]+numbers2[i]+resto;
-        if(sum >= 10){
-        sum = sum+"";
-        resto = parseInt(sum[0]);
-        sum = parseInt(sum[1]);
-        }else resto = 0;
-        sums.push(sum);
-    }
-return sums;
-
-}
-
-sumNumbers([2,4,3],[5,6,4]);

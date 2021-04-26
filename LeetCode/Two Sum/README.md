@@ -11,3 +11,15 @@ Given nums = [2, 7, 11, 15], target = 9,
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 ```
+function sumNumbers(numbers,value){
+  for(var i = 0; i<numbers.length;i++){
+     for(var j = i+1; j<numbers.length;j++){     
+        var sum = numbers[i]+numbers[j];
+        if(sum == value) return [i,j];
+    }  
+}
+
+}
+
+sumNumbers([2,7,11,15],18);
+ 
